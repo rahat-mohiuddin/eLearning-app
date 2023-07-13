@@ -1,8 +1,11 @@
 <script setup>
+import Header from '../components/Header.vue';
 </script>
 <template>
-    <header>header</header>
+    <Header />
     <main>
-        <router-view/>
+        <div class="container">
+            <router-view/>
+        </div>
     </main>
 </template>
