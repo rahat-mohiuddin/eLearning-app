@@ -1,8 +1,49 @@
-@import './reset.css';
+@import './reset.scss';
 @import './header.scss';
 @import './responsive.scss';
-$brand_color: #0EB582;
-
-.brand-color {
-    color: $brand_color;
+@import './variables.scss';
+// style for home page
+// page title
+.el-title{
+    color: $title-color;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    padding: 1rem;
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+}
+// home carousal
+.el-carousel{
+    width: 100%;
+    display: block;
+    padding: 3rem;
+    .el-slide-text{
+        margin-bottom: 1rem;
+        .el-slide-title{
+            color: $title-color;
+            font-size: 3rem;
+            text-align: left;
+            padding-bottom: .5rem;
+        }
+        .el-slide-sub-title{
+            color: $title-color;
+            opacity: .8;
+            font-size: 1.5rem;
+            text-align: left;
+        }
+        .el-slide-disc{
+            font-size: 1.1rem;
+            padding: 1rem 0;
+            text-align: left;
+        }
+    }
+    .el-slide-btn{
+        text-align: left;
+    }
+    .el-slide-img{
+        width: 100%;
+        max-width: 22rem;
+        display: block;
+    }
 }

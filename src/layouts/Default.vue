@@ -4,8 +4,6 @@ import Header from '../components/Header.vue';
 <template>
     <Header />
     <main>
-        <div class="container">
-            <router-view/>
-        </div>
+        <router-view/>
     </main>
 </template>

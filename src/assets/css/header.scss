@@ -1,3 +1,64 @@
+@import './variables.scss';
 header {
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+    .brand{
+        line-height: 3.6rem;
+        font-size: 1.5rem;
+        font-weight: 600;
+        span{
+            color: $brand-color;
+            font-weight: 400;
+        }
+    }
+    .el-nav-menu ul{
+        display: flex;
+        li{
+            position: relative;
+            .nav-link{
+                padding: 1.5rem 1rem;
+                font-weight: 500;
+                display: block;
+                transition: all .2s ease-in-out;
+                &:hover{
+                    color: $brand-color;
+                    background-color: $bg-soft-primary;
+                    ~ .el-dropdown{
+                        display: block;
+                    }
+                }
+            }
+            .router-link-active{
+                color: $brand-color;
+                background-color: $bg-soft-primary;
+            }
+            .el-dropdown{
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                border-top: 2px solid $brand-color;
+                background-color: $light-color;
+                box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+                &::before{
+                    content: "";
+                    position: relative;
+                    top: -31px;
+                    left: 10px;
+                    border: 10px solid transparent;
+                    border-bottom: 10px solid $brand-color;
+                }
+                .nav-link{
+                    padding: 1rem;
+                }
+            }
+        }
+    }
+    .el-login-btn{
+        display: flex;
+        justify-content: end;
+        > div{
+            line-height: 3.6rem;
+        }
+    }
 }
