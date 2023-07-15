@@ -23,7 +23,8 @@ header {
                 &:hover{
                     color: $brand-color;
                     background-color: $bg-soft-primary;
-                    ~ .el-dropdown{
+                    + .el-dropdown{
+                        z-index: 111;
                         display: block;
                     }
                 }

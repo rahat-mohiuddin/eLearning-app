@@ -18,9 +18,9 @@ export default {
     // const siteUrl = import.meta.env.VITE_BUILD_ADDRESS;
     setup() {
         const navItems = [
-            { id: 1, label: 'Home', link: '/', subItem: [] },
-            { id: 2, label: 'Profile', link: '/profile', subItem: [] },
-            { id: 3, label: 'About', link: '/about', subItem: [] },
+            { id: 1, label: 'Home', link: '/' },
+            { id: 2, label: 'Profile', link: '/profile' },
+            { id: 3, label: 'About', link: '/about' },
             { id: 4, label: 'Services', link: '/services',
               subItems: [
                 { id: 11, label: 'Course', link: '/course' },
@@ -29,7 +29,7 @@ export default {
                 { id: 14, label: 'Blog', link: '/blog' }
               ]
             },
-            { id: 5, label: 'Contact', link: '/contact', subItem: [] }
+            { id: 5, label: 'Contact', link: '/contact' }
         ];
         const dropdowns = {};
         navItems.forEach(item => {

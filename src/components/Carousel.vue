@@ -1,5 +1,5 @@
 <template>
-    <Carousel :autoplay="3000" :wrap-around="true">
+    <Carousel :wrap-around="true">
       <Slide v-for="slide in sliderItems" :key="slide.id">
         <div class="carousel__item">
             <div class="el-carousel" :style="{'background': slide.bgColor}">
@@ -23,21 +23,19 @@
       </Slide>
   
       <template #addons>
-        <Pagination />
       </template>
     </Carousel>
   </template>
   
 <script>
-  import { Carousel, Pagination, Slide } from 'vue3-carousel'
+  import { Carousel, Slide } from 'vue3-carousel'
   
   import 'vue3-carousel/dist/carousel.css'
   
   export default{
     components: {
       Carousel,
-      Slide,
-      Pagination,
+      Slide
     },
     data () {
         return {
