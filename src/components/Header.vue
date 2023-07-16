@@ -18,8 +18,8 @@ import navbar from './navbar.vue';
           <div class="col-sm-2">
             <div class="el-login-btn">
               <div>
-                <router-link class="btn btn-light btn-sm me-md-2" to="/auth/login">Login</router-link>
-                <router-link class="btn btn-success btn-sm" to="/auth/signup">Registration</router-link>
+                <router-link class="el-btn el-btn-light el-btn-sm me-2" to="/auth/login">Login</router-link>
+                <router-link class="el-btn el-btn-sm el-btn-primary" to="/auth/signup">Registration</router-link>
               </div>
             </div>
           </div>

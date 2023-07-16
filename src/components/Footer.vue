@@ -26,7 +26,7 @@
 footer{
     padding: 1.5rem;
     color: $light-color;
-    background-color: $dark-bg;
+    background-color: $dark-color;
     p{
         line-height: 33px;
     }

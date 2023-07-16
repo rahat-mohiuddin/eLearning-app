@@ -65,7 +65,7 @@
     <div class="row">
         <div class="col-12">
             <div class="text-center my-3">
-                <router-link class="btn el-button-primary" to="/blog">More Blog</router-link>
+                <router-link class="el-btn el-btn-primary" to="/blog">More Blog</router-link>
             </div>
         </div>
     </div>
