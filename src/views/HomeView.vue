@@ -5,6 +5,7 @@
   import Team from '../components/Team.vue';
   import About from '../components/AboutSection.vue';
   import CallToAction from '../components/CallToAction.vue';
+  import Course from '../components/CourseCard.vue';
   import Footer from '../components/Footer.vue';
 </script>
 
@@ -13,6 +14,15 @@
   <main>
     <section class="el-hero-section">
       <Carousel/>
+    </section>
+    <section class="el-course-section">
+      <div class="el-section-title">
+        <h1>Popular Topics To Learn</h1>
+        <p>Here are the latest company news from our blog that got the most attention.</p>
+      </div>
+      <div class="container-fluid">
+        <Course/>
+      </div>
     </section>
     <section class="el-blog-section">
       <div class="el-section-title">
