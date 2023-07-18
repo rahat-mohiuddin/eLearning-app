@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import Auth from '../views/auth.vue'
 const baseUrl = import.meta.env.VITE_BUILD_ADDRESS;
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -8,6 +9,11 @@ const router = createRouter({
       path: `${baseUrl}/`,
       name: 'home',
       component: HomeView
+    },
+    {
+      path: `${baseUrl}/user/login`,
+      name: 'auth',
+      component: Auth
     },
     {
       path: `${baseUrl}/profile`,
