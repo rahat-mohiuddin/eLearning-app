@@ -23,10 +23,6 @@ header {
                 &:hover{
                     color: $brand-color;
                     background-color: $bg-soft-primary;
-                    + .el-dropdown{
-                        z-index: 111;
-                        display: block;
-                    }
                 }
             }
             .router-link-active{
@@ -34,13 +30,18 @@ header {
                 background-color: $bg-soft-primary;
             }
             .el-dropdown{
-                display: none;
                 position: absolute;
                 top: 100%;
                 left: 0;
+                display: block;
+                z-index: 11;
+                visibility: hidden;
+                opacity: 0;
                 border-top: 2px solid $brand-color;
                 background-color: $light-color;
                 box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+                transition: all .3s ease-in-out;
+                -webkit-transition: all .3s ease-in-out;
                 &::before{
                     content: "";
                     position: relative;
@@ -52,6 +53,10 @@ header {
                 .nav-link{
                     padding: 1rem;
                 }
+                &.show-dropdown {
+                    visibility: visible !important;
+                    opacity: 1 !important;
+                  }
             }
         }
     }
