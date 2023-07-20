@@ -29,8 +29,12 @@ export default {
         },
         {
           label: 'Our Team',
-          url: '/team',
+          url: '/our-team',
           dropdownItems: []
+        },
+        {
+          label: 'Blog',
+          url: '/blog'
         },
         {
           label: 'Services',
@@ -38,19 +42,15 @@ export default {
           dropdownItems: [
             {
               label: 'Cource',
-              url: '/cource'
+              url: '/services/course'
             },
             {
               label: 'Tutorial',
-              url: '/tutorial'
+              url: '/services/tutorial'
             },
             {
               label: 'Application',
               url: '/application'
-            },
-            {
-              label: 'Blog',
-              url: '/blog'
             }
           ]
         },

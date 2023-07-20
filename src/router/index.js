@@ -16,17 +16,31 @@ const router = createRouter({
       component: Auth
     },
     {
-      path: `${baseUrl}/profile`,
+      path: `${baseUrl}/our-team`,
       component: () => import('../layouts/Default.vue'),
       children: [
-        { path: '', name: 'Profile', component: () => import('../views/Profile.vue') }
+        { path: '', name: 'Our Team', component: () => import('../views/OurTeam.vue') }
       ]
     },
     {
-      path: `${baseUrl}/course`,
+      path: `${baseUrl}/blog`,
       component: () => import('../layouts/Default.vue'),
       children: [
-        { path: '', name: 'Course', component: () => import('../views/Course.vue') }
+        { path: '', name: 'blog', component: () => import('../views/SingleBlog.vue') }
+      ]
+    },
+    {
+      path: `${baseUrl}/services`,
+      component: () => import('../layouts/Default.vue'),
+      children: [
+        { path: 'course', name: 'Course', component: () => import('../views/Course.vue') }
+      ]
+    },
+    {
+      path: `${baseUrl}/services`,
+      component: () => import('../layouts/Default.vue'),
+      children: [
+        { path: 'tutorial', name: 'Tutorial', component: () => import('../views/Tutorials.vue') }
       ]
     },
     {
