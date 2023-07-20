@@ -1,19 +1,24 @@
 <script>
-import { useRoute } from 'vue-router';
+import TutorialCard from '../components/TutorialCard.vue'
 export default {
+    components: {
+        TutorialCard
+    },
     setup() {
-        const route = useRoute();
-        const currentRouteName = route.name;
-        return {
-            currentRouteName
-        }
     }
 }
 </script>
 <template>
-    <div class="el-title">
-        <h1>{{ currentRouteName }}</h1>
+    <div class="row">
+        <div class="col-sm-4">
+            <TutorialCard />
+        </div>
+        <div class="col-sm-4">
+            <TutorialCard />
+        </div>
+        <div class="col-sm-4">
+            <TutorialCard />
+        </div>
     </div>
-    <p>this is Tutorial page</p>
 </template>
 <style></style>

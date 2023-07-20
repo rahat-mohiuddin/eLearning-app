@@ -429,3 +429,11 @@
         }
     }
 }
+
+// style for sidebar 
+.el-sidebar{
+    padding: .5rem;
+    min-height: 10rem;
+    background-color: $bg-soft-primary;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
