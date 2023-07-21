@@ -69,6 +69,14 @@
     }
     }
 }
+// form-control
+.form-control{
+    border-radius: 3px;
+    &:focus{
+        border-color: $brand-color;
+        box-shadow: none;
+    }
+}
 
 // style for home page
 // page title
@@ -425,8 +433,8 @@
 
 // style for sidebar 
 .el-sidebar{
-    padding: .5rem;
-    min-height: 10rem;
-    background-color: $bg-soft-primary;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 1rem .5rem;
+    min-height: 100vh;
+    border-right: 1px solid #e6e6e6;
+    background-color: #f7f7f7;
 }
