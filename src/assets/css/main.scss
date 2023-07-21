@@ -10,8 +10,12 @@
     font-size: 1.1rem;
     font-weight: 400;
     padding: .6rem 2rem;
+    border: none;
     border-radius: 2px;
     transition: all .5s ease 0s;
+    &.block{
+        width: 100%;
+    }
 }
 
 .el-btn-primary {
@@ -51,6 +55,19 @@
 .el-btn-sm {
     font-size: .9rem;
     padding: .3rem 1rem;
+}
+// pagination
+.pagination{
+    .page-item{
+        .page-link{
+            color: $brand-color;
+        }
+    &.disabled{
+        .page-link{
+            color: $text-color;
+        }
+    }
+    }
 }
 
 // style for home page
@@ -360,30 +377,6 @@
 
         img {
             transition: all 1s ease 0s;
-        }
-
-        .el-blog-overlay {
-            display: none;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 100%;
-            height: 100%;
-            background: rgba(68, 68, 68, 0.2);
-            border-radius: 10px;
-            transition: all 1s ease 0s;
-
-            >button {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                border-radius: none;
-                padding: 1rem;
-                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-                background: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
-            }
         }
     }
 

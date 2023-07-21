@@ -22,7 +22,7 @@ export default {
         <div class="el-title">
             <h1>{{ currentRouteName }}</h1>
         </div>
-        <div class="container-fluid">
+        <div class="container-fluid py-3">
             <div class="row">
                 <div class="col-sm-3">
                     <aside class="el-sidebar">
