@@ -1,5 +1,5 @@
 <template>
-    <Carousel :wrap-around="true">
+    <Carousel :wrap-around="true" autoplay="3000">
       <Slide v-for="slide in sliderItems" :key="slide.id">
         <div class="carousel__item">
             <div class="el-carousel" :style="{'background': slide.bgColor}">

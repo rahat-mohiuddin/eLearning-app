@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import Auth from '../views/auth.vue'
 const baseUrl = import.meta.env.VITE_BUILD_ADDRESS;
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -12,8 +11,17 @@ const router = createRouter({
     },
     {
       path: `${baseUrl}/user/login`,
-      name: 'auth',
-      component: Auth
+      component: () => import('../layouts/Auth.vue'),
+      children: [
+        {path: '', name: 'login', component: () => import('../components/Login.vue')}
+      ]
+    },
+    {
+      path: `${baseUrl}/user/signup`,
+      component: () => import('../layouts/Auth.vue'),
+      children: [
+        {path: '', name: 'signup', component: () => import('../components/Signup.vue')}
+      ]
     },
     {
       path: `${baseUrl}/our-team`,
@@ -26,7 +34,14 @@ const router = createRouter({
       path: `${baseUrl}/blog`,
       component: () => import('../layouts/Default.vue'),
       children: [
-        { path: '', name: 'blog', component: () => import('../views/SingleBlog.vue') }
+        { path: '', name: 'blog', component: () => import('../views/Blogs.vue') }
+      ]
+    },
+    {
+      path: `${baseUrl}/blog`,
+      component: () => import('../layouts/Default.vue'),
+      children: [
+        { path: 'post-1', name: 'Quick example build on the card title', component: () => import('../views/SingleBlog.vue') }
       ]
     },
     {

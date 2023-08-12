@@ -1,13 +1,13 @@
 <script>
 import BlogPost from '../components/BlogPost.vue';
 export default {
+    name: 'Quick example build on the card title',
     components: {
         BlogPost
     },
     data () {
         return {
-            blogPosts: [
-                {
+            post: {
                     link: '/',
                     title: 'Quick example build on the card title',
                     image: '/src/assets/images/blog-1.jpg',
@@ -16,88 +16,52 @@ export default {
                     publishDate: '15 July 2023',
                     postView: '341'
                 },
-                {
-                    link: '/',
-                    title: 'Artificial Intelligence (AI) Revolution',
-                    image: '/src/assets/images/blog-2.jpg',
-                    category: 'Tech World',
-                    categoryLink: '/',
-                    publishDate: '06 July 2023',
-                    postView: '5037'
-                },
-                {
-                    link: '/',
-                    title: '8 Advantages of Online Communication',
-                    image: '/src/assets/images/blog-3.jpg',
-                    category: 'Business & Communication',
-                    categoryLink: '/',
-                    publishDate: '21 March 2023',
-                    postView: '9711'
-                },
-                {
-                    link: '/',
-                    title: 'Quick example build on the card title',
-                    image: '/src/assets/images/blog-1.jpg',
-                    category: 'Quich Tips',
-                    categoryLink: '/',
-                    publishDate: '15 July 2023',
-                    postView: '341'
-                },
-                {
-                    link: '/',
-                    title: 'Artificial Intelligence (AI) Revolution',
-                    image: '/src/assets/images/blog-2.jpg',
-                    category: 'Tech World',
-                    categoryLink: '/',
-                    publishDate: '06 July 2023',
-                    postView: '5037'
-                },
-                {
-                    link: '/',
-                    title: '8 Advantages of Online Communication',
-                    image: '/src/assets/images/blog-3.jpg',
-                    category: 'Business & Communication',
-                    categoryLink: '/',
-                    publishDate: '21 March 2023',
-                    postView: '9711'
-                },
-            ]
         }
     }
 }
 </script>
 <template>
     <div class="row">
-        <div class="col-sm-4" v-for="blog in blogPosts">
-            <div class="mb-4">
-                <BlogPost
-                :link="blog.link"
-                :image="blog.image"
-                :title="blog.title"
-                :category="blog.category"
-                :categoryLink="blog.categoryLink"
-                :publishDate="blog.publishDate"
-                :postView="blog.postView"
-            />
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <nav aria-label="Page navigation">
-            <ul class="pagination justify-content-center">
-                <li class="page-item disabled">
-                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                <a class="page-link" href="#">Next</a>
-                </li>
-            </ul>
-            </nav>
+        <div class="col-12">
+            <article class="el-blog-card card">
+                <div class="el-blog-img">
+                    <img :src="post.image" class="card-img-top">
+                </div>
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <router-link class="el-blog-category" :to="post.categoryLink">{{ post.category }}</router-link>
+                        <div class="el-blog-meta">
+                            <span class="el-blog-date"><fa :icon="['far', 'calendar-days']" /> {{ post.publishDate }}</span>
+                            <span class="el-blog-view-count"><fa :icon="['far','eye']"/> {{ post.postView }}</span>
+                        </div>
+                    </div>
+                    <h1 class="el-blog-title">{{ post.title }}</h1>
+                    <div class="post-details">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    </div>
+                </div>
+            </article>
         </div>
     </div>
 </template>
-<style></style>
+.<style lang="scss" scoped>
+@import '../assets/css/variables.scss';
+.el-blog-card{
+    .el-blog-title{
+        color: $title-color;
+        font-size: 2rem;
+    }
+    .post-details{
+        margin-top: 1rem;
+        border-top: 1px solid #ddd;
+        p{
+            margin: .6rem 0;
+            color: $text-color;
+            font-size: 1.3rem;
+            line-height: 2rem;
+        }
+    }
+}
+</style>

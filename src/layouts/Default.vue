@@ -39,3 +39,5 @@ export default {
     </main>
     <Footer />
 </template>
+<style lang="scss" scoped>
+</style>
